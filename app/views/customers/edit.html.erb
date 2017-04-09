@@ -1,0 +1,45 @@
+<h1>Edit Customer</h1>
+
+<%= form_for :customer, url: customer_path(@customer), method: :patch do |f| %>
+
+	<p>
+		<%= f.label :name %><br>
+		<%= f.text_field :name %>
+	</p>
+
+	<p>
+    	<%= f.label :street %><br>
+    	<%= f.text_field :street %>
+  	</p>
+
+  	<p>
+		<%= f.label :zipcode %><br>
+		<%= f.text_field :zipcode %>
+	</p>
+ 
+	<p>
+		<%= f.label :city %><br>
+		<%= f.text_field :city %>
+	</p>
+
+	<p>
+		<%= f.label :email %><br>
+		<%= f.text_field :email %>
+	</p>
+
+	<p>
+		<%= f.label :banknumber %><br>
+		<%= f.text_field :banknumber %>
+	</p>
+
+	<p>
+		<%= f.label :accountnumer %><br>
+		<%= f.text_field :accountnumer %>
+	</p>
+ 
+  	<p>
+    	<%= f.submit %>
+  	</p>
+<% end %>
+
+<%= link_to 'Back to List', customers_path %>
